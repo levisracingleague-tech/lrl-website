@@ -1,6 +1,6 @@
 window.LRL_SUPABASE_CONFIG = {
   projectUrl: "https://tjcvlmlweflgmbgnpbmm.supabase.co",
-  anonKey: "PLAK_HIER_DE_SLEUTEL_DIE_JE_NET_STUURDE"
+  anonKey: "sb_publishable_I7e9B0kHGXJpihT0KqU4Ww_QqCeuYO-"
 };
 
 window.LRL_SUPABASE_READY = function () {
