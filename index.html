@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="The official website of Levi's Racing League — competitive Roblox racing with equal cars, close battles and professional race events.">
+  <meta property="og:title" content="Levi's Racing League">
+  <meta property="og:description" content="Every Lap. Every Battle. Join competitive Roblox racing on PC and console.">
+  <meta property="og:image" content="assets/lrl-logo.png">
+  <title>Levi's Racing League | Every Lap. Every Battle.</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-glow page-glow--one" aria-hidden="true"></div>
+  <div class="page-glow page-glow--two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Levi's Racing League home">
+      <img src="assets/lrl-logo.png" alt="Levi's Racing League logo">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#season">Season 1</a>
+      <a href="#teams">Teams</a>
+      <a href="#standings">Standings</a>
+      <a href="#staff">Staff</a>
+      <a href="#sponsors">Sponsors</a>
+      <a class="nav-cta" data-link="discord" href="#">Join Discord</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> Season 1 · Roblox Racing League</div>
+        <h1>Every Lap.<br><strong>Every Battle.</strong></h1>
+        <p>
+          Competitive Roblox racing inspired by the atmosphere of the 2010 formula racing era.
+          Equal cars, close battles and professionally controlled race events.
+        </p>
+        <div class="hero-actions">
+          <a class="button button--primary" data-link="discord" href="#">Join LRL</a>
+          <a class="button button--secondary" href="#season">View Season 1</a>
+        </div>
+        <div class="platform-note">Competitive driving on PC &amp; console</div>
+      </div>
+
+      <aside class="race-card" aria-label="League overview">
+        <div class="race-card__top">
+          <span>LRL</span>
+          <span class="live-dot">SEASON 1</span>
+        </div>
+        <div class="race-card__headline">THE GRID IS FORMING</div>
+        <div class="timing-row">
+          <span class="position">1</span><span class="team-stripe ferrari"></span><span class="code">FER</span><span class="status">READY</span>
+        </div>
+        <div class="timing-row">
+          <span class="position">2</span><span class="team-stripe cronova"></span><span class="code">CRN</span><span class="status">READY</span>
+        </div>
+        <div class="timing-row timing-row--open">
+          <span class="position">3</span><span class="team-stripe open"></span><span class="code">---</span><span class="status">OPEN</span>
+        </div>
+        <div class="race-card__footer">5 team slots · 6 rounds · Top 8 score</div>
+      </aside>
+    </section>
+
+    <section class="stats-strip" aria-label="League facts">
+      <div><strong>6</strong><span>Season 1 rounds</span></div>
+      <div><strong>5</strong><span>Maximum teams</span></div>
+      <div><strong>20</strong><span>Points for a win</span></div>
+      <div><strong>2</strong><span>Drivers per team</span></div>
+    </section>
+
+    <section class="section" id="season">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">Official calendar</span>
+          <h2>Season 1</h2>
+        </div>
+        <p>Six race weekends. Dates will be announced through the LRL Discord.</p>
+      </div>
+      <div class="calendar-grid" id="calendarGrid"></div>
+    </section>
+
+    <section class="section section--dark" id="teams">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">The grid</span>
+          <h2>Teams</h2>
+        </div>
+        <p>Each team has one Team Owner, two main drivers and an optional reserve driver.</p>
+      </div>
+      <div class="team-grid" id="teamGrid"></div>
+    </section>
+
+    <section class="section" id="standings">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">Championship</span>
+          <h2>Standings</h2>
+        </div>
+        <p>Championship standings will go live after the first official round.</p>
+      </div>
+
+      <div class="standings-layout">
+        <div class="standings-card">
+          <div class="standings-card__header">
+            <span>Drivers' Championship</span>
+            <span>PRE-SEASON</span>
+          </div>
+          <div class="empty-standings">
+            <strong>No points awarded yet</strong>
+            <span>The first classification will appear here after Round 1.</span>
+          </div>
+        </div>
+
+        <div class="points-card">
+          <span class="kicker">Points system</span>
+          <h3>Top 8 score</h3>
+          <div class="points-line">
+            <span>P1<br><strong>20</strong></span>
+            <span>P2<br><strong>15</strong></span>
+            <span>P3<br><strong>12</strong></span>
+            <span>P4<br><strong>10</strong></span>
+            <span>P5<br><strong>8</strong></span>
+            <span>P6<br><strong>6</strong></span>
+            <span>P7<br><strong>4</strong></span>
+            <span>P8<br><strong>2</strong></span>
+          </div>
+          <p>No pole-position or fastest-lap bonus points.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--accent" id="regulations">
+      <div class="regulations-card">
+        <div>
+          <span class="kicker">Sporting document</span>
+          <h2>Season 1 Regulations</h2>
+          <p>
+            All drivers, team owners and staff must read the official regulations before
+            taking part in an LRL session.
+          </p>
+        </div>
+        <a class="button button--light" data-link="regulations" href="#">Read Regulations</a>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="staff">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">League management</span>
+          <h2>LRL Staff</h2>
+        </div>
+        <p>A compact team managing racing, development, community and media.</p>
+      </div>
+      <div class="staff-grid" id="staffGrid"></div>
+    </section>
+
+    <section class="section" id="sponsors">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">Support the league</span>
+          <h2>Season 1 Sponsorship</h2>
+        </div>
+        <p>Put your community, group or brand in front of the LRL audience.</p>
+      </div>
+      <div class="sponsor-grid" id="sponsorGrid"></div>
+      <div class="sponsor-note">
+        Partnerships are free reciprocal collaborations and are separate from sponsorships.
+        Sponsor availability and final placements are confirmed by LRL management.
+      </div>
+    </section>
+
+    <section class="join-section" id="join">
+      <div class="join-inner">
+        <span class="kicker">Join the grid</span>
+        <h2>Your next race starts here.</h2>
+        <p>Join the Discord for driver applications, team news, votes and event announcements.</p>
+        <div class="hero-actions hero-actions--center">
+          <a class="button button--primary" data-link="discord" href="#">Join Discord</a>
+          <a class="button button--secondary" data-link="tiktok" href="#">Follow TikTok</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/lrl-logo.png" alt="">
+    <div>
+      <strong>Levi's Racing League</strong>
+      <span>Every Lap. Every Battle.</span>
+    </div>
+    <div class="footer-links">
+      <a data-link="discord" href="#">Discord</a>
+      <a data-link="tiktok" href="#">TikTok</a>
+      <a data-link="github" href="#">GitHub</a>
+    </div>
+    <p class="legal">
+      Independent Roblox racing community. Not affiliated with Roblox Corporation,
+      Formula 1, the FIA, or any real-world racing team or championship.
+    </p>
+    <span class="copyright">© <span id="year"></span> Levi's Racing League</span>
+  </footer>
+</body>
+</html>
