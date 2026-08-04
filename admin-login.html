@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#08090d">
+  <title>LRL Admin Login</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase-config.js" defer></script>
+  <script src="admin-login.js" defer></script>
+</head>
+<body>
+  <main class="login-shell">
+    <section class="login-card">
+      <a href="index.html"><img src="assets/lrl-logo.png" alt="Levi's Racing League"></a>
+      <span class="eyebrow">Secure management</span>
+      <h1>Admin Login</h1>
+      <p>Sign in to manage LRL teams and championship standings.</p>
+
+      <div id="setupWarning" class="setup-warning" hidden>
+        Supabase is not connected yet. Complete the setup instructions in README_ADMIN.md first.
+      </div>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="email">ADMIN EMAIL</label>
+          <input id="email" name="email" type="email" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="password">PASSWORD</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <button id="loginButton" class="button button--primary button--full" type="submit">SIGN IN</button>
+      </form>
+
+      <div id="loginStatus" class="status-box" role="status"></div>
+      <a class="button button--full" href="index.html">BACK TO WEBSITE</a>
+    </section>
+  </main>
+</body>
+</html>

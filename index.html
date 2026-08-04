@@ -11,6 +11,8 @@
   <title>Levi's Racing League | Every Lap. Every Battle.</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase-config.js" defer></script>
   <script src="site-data.js" defer></script>
   <script src="script.js" defer></script>
 </head>
@@ -33,6 +35,8 @@
       <a href="#standings">Standings</a>
       <a href="#staff">Staff</a>
       <a href="#sponsors">Sponsors</a>
+      <a href="#community">Community</a>
+      <a class="admin-link" href="admin-login.html">Admin</a>
       <a class="nav-cta" data-link="discord" href="#">Join Discord</a>
     </nav>
   </header>
@@ -115,11 +119,13 @@
         <div class="standings-card">
           <div class="standings-card__header">
             <span>Drivers' Championship</span>
-            <span>PRE-SEASON</span>
+            <span id="standingsStatus">PRE-SEASON</span>
           </div>
-          <div class="empty-standings">
-            <strong>No points awarded yet</strong>
-            <span>The first classification will appear here after Round 1.</span>
+          <div id="standingsTable" class="standings-table">
+            <div class="empty-standings">
+              <strong>No points awarded yet</strong>
+              <span>The first classification will appear here after Round 1.</span>
+            </div>
           </div>
         </div>
 
@@ -178,6 +184,41 @@
       <div class="sponsor-note">
         Partnerships are free reciprocal collaborations and are separate from sponsorships.
         Sponsor availability and final placements are confirmed by LRL management.
+      </div>
+    </section>
+
+
+    <section class="section section--dark" id="community">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">Live community</span>
+          <h2>LRL Discord</h2>
+        </div>
+        <p>See who is online and join the official Levi’s Racing League community.</p>
+      </div>
+
+      <div class="discord-layout">
+        <div class="discord-copy">
+          <span class="kicker">Official server</span>
+          <h3>Join the paddock</h3>
+          <p>
+            Driver applications, team news, circuit votes, race announcements,
+            partnerships and live event updates are all posted in Discord.
+          </p>
+          <a class="button button--primary" data-link="discord" href="#">Join LRL Discord</a>
+        </div>
+
+        <div class="discord-widget-shell">
+          <iframe
+            title="Levi's Racing League Discord"
+            src="https://discord.com/widget?id=1533580785733337290&theme=dark"
+            width="350"
+            height="500"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+          </iframe>
+        </div>
       </div>
     </section>
 

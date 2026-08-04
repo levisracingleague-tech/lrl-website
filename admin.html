@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#08090d">
+  <title>LRL Admin</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase-config.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <header class="admin-topbar">
+    <a href="index.html"><img src="assets/lrl-logo.png" alt="Levi's Racing League"></a>
+    <div class="admin-actions">
+      <a class="button" href="index.html">VIEW WEBSITE</a>
+      <button id="logoutButton" class="button button--danger" type="button">LOG OUT</button>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+    <div class="admin-hero">
+      <div>
+        <span class="eyebrow">Levi's Racing League</span>
+        <h1>Admin Control</h1>
+        <p id="adminIdentity">Checking secure session…</p>
+      </div>
+    </div>
+
+    <div id="adminStatus" class="status-box" role="status"></div>
+
+    <nav class="admin-tabs" aria-label="Admin sections">
+      <button class="button admin-tab is-active" data-panel="teamsPanel" type="button">TEAMS</button>
+      <button class="button admin-tab" data-panel="standingsPanel" type="button">STANDINGS</button>
+    </nav>
+
+    <section id="teamsPanel" class="admin-panel is-active">
+      <div class="admin-grid">
+        <form id="teamForm" class="admin-card">
+          <span class="eyebrow">Grid management</span>
+          <h2 id="teamFormTitle">Add Team</h2>
+          <input id="teamId" type="hidden">
+
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="teamName">TEAM NAME</label>
+              <input id="teamName" required>
+            </div>
+            <div class="field">
+              <label for="teamColor">TEAM COLOUR</label>
+              <input id="teamColor" type="color" value="#596170" required>
+            </div>
+            <div class="field">
+              <label for="teamStatus">STATUS</label>
+              <select id="teamStatus">
+                <option>Active</option>
+                <option>Open</option>
+                <option>Inactive</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="teamOwner">TEAM OWNER</label>
+              <input id="teamOwner">
+            </div>
+            <div class="field">
+              <label for="teamDriver1">DRIVER 1</label>
+              <input id="teamDriver1">
+            </div>
+            <div class="field">
+              <label for="teamDriver2">DRIVER 2</label>
+              <input id="teamDriver2">
+            </div>
+            <div class="field field--full">
+              <label for="teamReserve">RESERVE DRIVER</label>
+              <input id="teamReserve">
+            </div>
+            <div class="field field--full">
+              <label for="teamOrder">DISPLAY ORDER</label>
+              <input id="teamOrder" type="number" value="0" min="0">
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="button button--primary" type="submit">SAVE TEAM</button>
+            <button id="cancelTeamEdit" class="button" type="button">CLEAR</button>
+          </div>
+        </form>
+
+        <div class="admin-card">
+          <span class="eyebrow">Current grid</span>
+          <h2>Teams</h2>
+          <div id="teamList" class="record-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="standingsPanel" class="admin-panel">
+      <div class="admin-grid">
+        <form id="standingForm" class="admin-card">
+          <span class="eyebrow">Championship management</span>
+          <h2 id="standingFormTitle">Add Driver</h2>
+          <input id="standingId" type="hidden">
+
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="driverName">DRIVER NAME</label>
+              <input id="driverName" required>
+            </div>
+            <div class="field field--full">
+              <label for="driverTeam">TEAM</label>
+              <input id="driverTeam">
+            </div>
+            <div class="field">
+              <label for="driverPoints">POINTS</label>
+              <input id="driverPoints" type="number" value="0" min="0" required>
+            </div>
+            <div class="field">
+              <label for="driverWins">WINS</label>
+              <input id="driverWins" type="number" value="0" min="0" required>
+            </div>
+            <div class="field">
+              <label for="driverPodiums">PODIUMS</label>
+              <input id="driverPodiums" type="number" value="0" min="0" required>
+            </div>
+            <div class="field">
+              <label for="driverRaces">RACES</label>
+              <input id="driverRaces" type="number" value="0" min="0" required>
+            </div>
+            <div class="field field--full">
+              <label for="standingOrder">TIE-BREAK ORDER</label>
+              <input id="standingOrder" type="number" value="0" min="0">
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="button button--primary" type="submit">SAVE DRIVER</button>
+            <button id="cancelStandingEdit" class="button" type="button">CLEAR</button>
+          </div>
+        </form>
+
+        <div class="admin-card">
+          <span class="eyebrow">Live championship</span>
+          <h2>Driver Standings</h2>
+          <div id="standingList" class="record-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
